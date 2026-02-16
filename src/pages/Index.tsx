@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import GradeSelector from "@/components/GradeSelector";
 import ScheduleTable from "@/components/ScheduleTable";
+import NextClassCountdown from "@/components/NextClassCountdown";
 import { GRADES } from "@/data/scheduleData";
 import { GraduationCap } from "lucide-react";
 
@@ -40,7 +41,10 @@ const Index = () => {
               <h3 className="text-xl font-bold text-foreground mb-4 text-center">
                 جدول {activeGrade.name}
               </h3>
-              <ScheduleTable grade={activeGrade} />
+              <NextClassCountdown grade={activeGrade} />
+              <div className="mt-4">
+                <ScheduleTable grade={activeGrade} />
+              </div>
             </div>
           )}
         </div>
