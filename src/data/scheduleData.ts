@@ -7,7 +7,6 @@ export interface ClassSession {
 export interface GradeSchedule {
   id: string;
   name: string;
-  // schedule[day][timeSlot] = ClassSession
   schedule: Record<string, Record<string, ClassSession>>;
 }
 
@@ -20,9 +19,9 @@ export const TIME_SLOTS = [
   "6:00 – 7:00",
   "7:00 – 8:00",
   "8:00 – 9:00",
+  "9:00 – 10:00",
 ] as const;
 
-// Map time slot start hours for live detection (Egypt = UTC+2)
 export const TIME_SLOT_HOURS: Record<string, { start: number; end: number }> = {
   "3:00 – 4:00": { start: 15, end: 16 },
   "4:00 – 5:00": { start: 16, end: 17 },
@@ -30,6 +29,7 @@ export const TIME_SLOT_HOURS: Record<string, { start: number; end: number }> = {
   "6:00 – 7:00": { start: 18, end: 19 },
   "7:00 – 8:00": { start: 19, end: 20 },
   "8:00 – 9:00": { start: 20, end: 21 },
+  "9:00 – 10:00": { start: 21, end: 22 },
 };
 
 export const GRADES: GradeSchedule[] = [
@@ -62,9 +62,9 @@ export const GRADES: GradeSchedule[] = [
     schedule: {
       "السبت": {
         "8:00 – 9:00": {
-          teacher: "مس علياء سامي أمين",
-          subject: "Math",
-          zoomLink: "https://us04web.zoom.us/j/75049105317?pwd=aQnj5q6SRLR2puqXnzN4zaNNN7mxyr.1",
+          teacher: "مس ندى سعد",
+          subject: "Science",
+          zoomLink: "https://us05web.zoom.us/j/89473108725?pwd=0ZmTJu4np2tAaQ2LXzdaIYa625yEeB.1",
         },
       },
     },
@@ -105,17 +105,153 @@ export const GRADES: GradeSchedule[] = [
   {
     id: "grade-1-prep",
     name: "الصف الأول الإعدادي",
-    schedule: {},
+    schedule: {
+      "السبت": {
+        "8:00 – 9:00": {
+          teacher: "—",
+          subject: "تجويد",
+          zoomLink: "#",
+        },
+      },
+      "الأحد": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "لغة فرنسية",
+          zoomLink: "#",
+        },
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "ماث",
+          zoomLink: "#",
+        },
+      },
+      "الاثنين": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "أصول دين وفقه",
+          zoomLink: "#",
+        },
+      },
+      "الثلاثاء": {
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "ساينس",
+          zoomLink: "#",
+        },
+        "8:00 – 9:00": {
+          teacher: "—",
+          subject: "عربي عام",
+          zoomLink: "#",
+        },
+        "9:00 – 10:00": {
+          teacher: "—",
+          subject: "عربي أزهر",
+          zoomLink: "#",
+        },
+      },
+      "الأربعاء": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "دراسات",
+          zoomLink: "#",
+        },
+        "7:00 – 8:00": {
+          teacher: "—",
+          subject: "تحفيظ وتجويد",
+          zoomLink: "#",
+        },
+      },
+      "الخميس": {
+        "7:00 – 8:00": {
+          teacher: "—",
+          subject: "رياضيات",
+          zoomLink: "#",
+        },
+        "8:00 – 9:00": {
+          teacher: "—",
+          subject: "انجليزي",
+          zoomLink: "#",
+        },
+        "9:00 – 10:00": {
+          teacher: "—",
+          subject: "علوم",
+          zoomLink: "#",
+        },
+      },
+    },
   },
   {
     id: "grade-2-prep",
     name: "الصف الثاني الإعدادي",
     schedule: {
       "السبت": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "علوم",
+          zoomLink: "#",
+        },
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "لغة فرنسية",
+          zoomLink: "#",
+        },
         "7:00 – 8:00": {
           teacher: "أسماء معوض",
           subject: "اللغة العربية",
           zoomLink: "https://us05web.zoom.us/j/9266697397?pwd=KQx0YWAaQPvZxhqT0CtRLPFmrXhyGu.1&omn=83147814426",
+        },
+      },
+      "الأحد": {
+        "7:00 – 8:00": {
+          teacher: "—",
+          subject: "عربي أزهر",
+          zoomLink: "#",
+        },
+        "9:00 – 10:00": {
+          teacher: "—",
+          subject: "عربي عام",
+          zoomLink: "#",
+        },
+      },
+      "الاثنين": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "دراسات",
+          zoomLink: "#",
+        },
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "أصول دين وفقه",
+          zoomLink: "#",
+        },
+        "8:00 – 9:00": {
+          teacher: "—",
+          subject: "تجويد",
+          zoomLink: "#",
+        },
+      },
+      "الثلاثاء": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "ساينس",
+          zoomLink: "#",
+        },
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "رياضيات",
+          zoomLink: "#",
+        },
+      },
+      "الخميس": {
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "ماث",
+          zoomLink: "#",
+        },
+        "9:00 – 10:00": {
+          teacher: "—",
+          subject: "لغة انجليزية",
+          zoomLink: "#",
         },
       },
     },
@@ -125,10 +261,70 @@ export const GRADES: GradeSchedule[] = [
     name: "الصف الثالث الإعدادي",
     schedule: {
       "السبت": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "ساينس",
+          zoomLink: "#",
+        },
         "8:00 – 9:00": {
           teacher: "مسيو علي المهياص",
           subject: "اللغة الفرنسية",
           zoomLink: "https://us04web.zoom.us/j/4599005902?pwd=VTVxcWcvQ3gvQlgvSEljbEF3dk5Ydz09",
+        },
+      },
+      "الأحد": {
+        "7:00 – 8:00": {
+          teacher: "—",
+          subject: "لغة انجليزية",
+          zoomLink: "#",
+        },
+        "9:00 – 10:00": {
+          teacher: "—",
+          subject: "عربي أزهر",
+          zoomLink: "#",
+        },
+      },
+      "الاثنين": {
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "فقه وأصول دين",
+          zoomLink: "#",
+        },
+        "7:00 – 8:00": {
+          teacher: "—",
+          subject: "عربي عام",
+          zoomLink: "#",
+        },
+      },
+      "الثلاثاء": {
+        "5:00 – 6:00": {
+          teacher: "—",
+          subject: "دراسات",
+          zoomLink: "#",
+        },
+      },
+      "الأربعاء": {
+        "6:00 – 7:00": {
+          teacher: "—",
+          subject: "ماث",
+          zoomLink: "#",
+        },
+        "7:00 – 8:00": {
+          teacher: "—",
+          subject: "رياضيات",
+          zoomLink: "#",
+        },
+      },
+      "الخميس": {
+        "8:00 – 9:00": {
+          teacher: "—",
+          subject: "علوم",
+          zoomLink: "#",
+        },
+        "9:00 – 10:00": {
+          teacher: "—",
+          subject: "علوم",
+          zoomLink: "#",
         },
       },
     },
@@ -165,13 +361,3 @@ export const GRADES: GradeSchedule[] = [
     },
   },
 ];
-
-// Also add Grade 4 Science to grade-4-primary
-GRADES[3].schedule["السبت"] = {
-  ...GRADES[3].schedule["السبت"],
-  "8:00 – 9:00": {
-    teacher: "مس ندى سعد",
-    subject: "Science",
-    zoomLink: "https://us05web.zoom.us/j/89473108725?pwd=0ZmTJu4np2tAaQ2LXzdaIYa625yEeB.1",
-  },
-};
