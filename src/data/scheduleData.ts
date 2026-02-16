@@ -332,18 +332,65 @@ export const GRADES: GradeSchedule[] = [
   {
     id: "grade-1-secondary",
     name: "الصف الأول الثانوي",
-    schedule: {},
+    schedule: {
+      "السبت": {
+        "5:00 – 6:00": { teacher: "—", subject: "عربي أزهر", zoomLink: "#" },
+        "7:00 – 8:00": { teacher: "—", subject: "علوم متكاملة", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "عربي عام", zoomLink: "#" },
+      },
+      "الاثنين": {
+        "7:00 – 8:00": { teacher: "—", subject: "English", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "Integrated Science", zoomLink: "#" },
+      },
+      "الثلاثاء": {
+        "7:00 – 8:00": { teacher: "—", subject: "فرنسي", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "فرنسي", zoomLink: "#" },
+      },
+      "الأربعاء": {
+        "6:00 – 7:00": { teacher: "—", subject: "رياضيات", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "Math", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "German", zoomLink: "#" },
+      },
+      "الخميس": {
+        "7:00 – 8:00": { teacher: "—", subject: "علوم شرعية", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "تاريخ", zoomLink: "#" },
+      },
+    },
   },
   {
     id: "grade-2-secondary",
     name: "الصف الثاني الثانوي",
     schedule: {
       "السبت": {
+        "4:00 – 5:00": { teacher: "—", subject: "عربي أزهر", zoomLink: "#" },
+        "6:00 – 7:00": { teacher: "—", subject: "فيزياء", zoomLink: "#" },
         "8:00 – 9:00": {
           teacher: "أحمد ربيع (معلم خبير رياضيات)",
           subject: "الرياضيات",
           zoomLink: "https://us05web.zoom.us/j/82624753888?pwd=cfbkxrOPxXdarIpt9Y3LjaaqIdiCRS.1",
         },
+      },
+      "الأحد": {
+        "5:00 – 6:00": { teacher: "—", subject: "حصة", zoomLink: "#" },
+        "6:00 – 7:00": { teacher: "—", subject: "Physics", zoomLink: "#" },
+        "7:00 – 8:00": { teacher: "—", subject: "كيمياء", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "عربي عام", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "تاريخ", zoomLink: "#" },
+      },
+      "الاثنين": {
+        "8:00 – 9:00": { teacher: "—", subject: "German", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "English", zoomLink: "#" },
+      },
+      "الثلاثاء": {
+        "8:00 – 9:00": { teacher: "—", subject: "فلسفة", zoomLink: "#" },
+      },
+      "الأربعاء": {
+        "5:00 – 6:00": { teacher: "—", subject: "French", zoomLink: "#" },
+        "7:00 – 8:00": { teacher: "—", subject: "جغرافيا", zoomLink: "#" },
+      },
+      "الخميس": {
+        "7:00 – 8:00": { teacher: "—", subject: "علوم شرعية", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "Chemistry", zoomLink: "#" },
       },
     },
   },
@@ -357,6 +404,28 @@ export const GRADES: GradeSchedule[] = [
           subject: "الأحياء",
           zoomLink: "https://us05web.zoom.us/j/81241998886?pwd=2xs1PFfucINqK0Qtalwt6IYNLUnuyB.1",
         },
+        "8:00 – 9:00": { teacher: "—", subject: "جغرافيا", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "تاريخ", zoomLink: "#" },
+      },
+      "الأحد": {
+        "7:00 – 8:00": { teacher: "—", subject: "أحياء", zoomLink: "#" },
+        "8:00 – 9:00": { teacher: "—", subject: "كيمياء", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "لغة إنجليزية", zoomLink: "#" },
+      },
+      "الاثنين": {
+        "8:00 – 9:00": { teacher: "—", subject: "لغة فرنسية", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "لغة المانية", zoomLink: "#" },
+      },
+      "الثلاثاء": {
+        "5:00 – 6:00": { teacher: "—", subject: "فيزياء", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "لغة عربية", zoomLink: "#" },
+      },
+      "الأربعاء": {
+        "7:00 – 8:00": { teacher: "—", subject: "علوم شرعية", zoomLink: "#" },
+      },
+      "الخميس": {
+        "4:00 – 5:00": { teacher: "—", subject: "رياضيات", zoomLink: "#" },
+        "9:00 – 10:00": { teacher: "—", subject: "عربي أزهر", zoomLink: "#" },
       },
     },
   },
